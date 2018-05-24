@@ -12,9 +12,9 @@ class Song
     @@all << self
   end 
   
-  def name=(name)
-    @name = name
-  end
+  # def name=(name)
+  #   @name = name
+  # end
   
 
   def artist_name=(artist_name)
