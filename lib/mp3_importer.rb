@@ -22,7 +22,7 @@ class MP3Importer
     files
     # puts @files.inspect
     song_objs = @files.collect do |song_name| 
-      song = Song.new_by_filename(song_name)
+      Song.new_by_filename(song_name)
     puts song_objs.inspect
     end
     Artist.class.save(song_objs)
