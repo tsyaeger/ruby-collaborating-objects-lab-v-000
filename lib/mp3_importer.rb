@@ -2,7 +2,7 @@
 
 class MP3Importer 
   
-  attr_accessor :path, :files
+  attr_accessor :path
   
   @@all = []
   
@@ -13,9 +13,9 @@ class MP3Importer
   def files
     raw_files = Dir["#{@path}/*.mp3"]
     raw_files = raw_files.join("")
-    @files = raw_files.split("#{path}/")
-    @files.shift
-    @files
+    files = raw_files.split("#{path}/")
+    files.shift
+    files
   end 
   
   def import
