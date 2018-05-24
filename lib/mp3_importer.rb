@@ -20,7 +20,7 @@ class MP3Importer
   
   def import
     files
-    song_objs = @files.collect do |song_name| 
+    song_objs = @files.each do |song_name| 
       Song.new_by_filename(song_name)
     end
   end
