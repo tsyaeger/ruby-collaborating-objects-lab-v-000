@@ -17,6 +17,10 @@ class Artist
     self.save
   end
   
+  def name=(name)
+    @name = name
+  end
+  
   def add_song(song)
     song.artist = self
     @songs << song 
