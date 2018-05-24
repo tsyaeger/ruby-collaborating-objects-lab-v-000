@@ -28,7 +28,6 @@ class Song
     artist, song, ext = filename.split(" - ")
     song = self.new(song)
     song.artist = Artist.find_or_create_by_name(artist)
-    artist.add_song(song)
     song
   end
 
