@@ -12,10 +12,8 @@ class MP3Importer
   
   def files
     raw_files = Dir["#{@path}/*.mp3"]
-    raw_files = raw_files.join("")
-    files = raw_files.split("#{path}/")
-    files.shift
-    files
+    files = raw_files.collect{|file| file.split("#{path}/")[1]}
+
   end 
   
   def import
