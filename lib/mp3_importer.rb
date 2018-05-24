@@ -23,7 +23,6 @@ class MP3Importer
     puts @files.inspect
     @files.collect do |song_name| 
       song = Song.new_by_filename(song_name)
-      Artist.save(song)
     end
   end
  
