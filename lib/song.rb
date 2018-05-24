@@ -12,10 +12,6 @@ class Song
     @@all << self
   end 
   
-  # def name=(name)
-  #   @name = name
-  # end
-  
 
   def artist_name=(artist_name)
     artist = Artist.find_or_create_by_name(artist_name)
