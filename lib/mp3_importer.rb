@@ -25,7 +25,6 @@ class MP3Importer
       Song.new_by_filename(song_name)
     puts song_objs.inspect
     end
-    Artist.class.save(song_objs)
   end
  
 end
