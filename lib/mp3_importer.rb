@@ -18,7 +18,7 @@ class MP3Importer
   def import
     files
     puts files
-    song_objs = @files.each {|song_name| Song.new_by_filename(song_name)}
+    song_objs = files.each {|song_name| Song.new_by_filename(song_name)}
     puts song_objs.inspect
     song_objs
   end
