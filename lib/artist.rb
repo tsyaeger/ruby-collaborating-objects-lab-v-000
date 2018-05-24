@@ -1,6 +1,5 @@
 
 
-
 class Artist 
   
   attr_accessor :name, :songs
@@ -34,7 +33,7 @@ class Artist
   def self.find_or_create_by_name(name)
     artist = @@all.detect{|artist| artist.name == name}
     if not artist
-      artist = Artist.new(name)
+      artist = self.new(name)
     else
       artist
     end
